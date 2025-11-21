@@ -1,0 +1,30 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+  "editor.rulers": [
+    100
+  ],
+  "terminal.integrated.defaultProfile.windows": "MSYS2",
+  "terminal.integrated.profiles.windows": {
+    "MSYS2": {
+      "path": "C:/msys64/usr/bin/bash.exe",
+      "args": [
+        "--login"
+      ],
+      "env": {
+        "MSYSTEM": "MINGW64",
+        "CHERE_INVOKING": "1"
+      }
+    }
+  },
+  "search.exclude": {
+    "ephemeral": true
+  }
+}
