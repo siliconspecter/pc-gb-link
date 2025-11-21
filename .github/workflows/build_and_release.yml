@@ -14,6 +14,8 @@ jobs:
       if: ${{ matrix.os == 'windows-latest' }}
     - run: setx PATH "$env:PATH;C:\Program Files\OpenSCAD"
       if: ${{ matrix.os == 'windows-latest' }}
+    - run: dir c:\Program Files
+      if: ${{ matrix.os == 'windows-latest' }}
     - run: brew install --cask openscad
       if: ${{ matrix.os == 'macos-latest' }}
     - run: make
