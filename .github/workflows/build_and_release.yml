@@ -12,9 +12,7 @@ jobs:
       if: ${{ matrix.os == 'ubuntu-latest' }}
     - run: winget install --accept-source-agreements --id=OpenSCAD.OpenSCAD -e
       if: ${{ matrix.os == 'windows-latest' }}
-    - run: setx PATH "$env:PATH;C:\Program Files\OpenSCAD"
-      if: ${{ matrix.os == 'windows-latest' }}
-    - run: dir "c:\Program Files\OpenSCAD"
+    - run: echo "%ProgramFiles%\OpenSCAD" >> $GITHUB_PATH
       if: ${{ matrix.os == 'windows-latest' }}
     - run: brew install --cask openscad
       if: ${{ matrix.os == 'macos-latest' }}
