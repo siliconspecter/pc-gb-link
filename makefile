@@ -1,7 +1,9 @@
 ifeq ($(OS),Windows_NT)
 	CC = x86_64-w64-mingw32-gcc
+	OPENSCAD = openscad.exe
 else
 	CC = clang
+	OPENSCAD = openscad
 endif
 
 CFLAGS = -Wall -Wextra -Werror -std=c89 -O3 -pedantic
@@ -39,7 +41,7 @@ build: $(EPHEMERAL_CASINGS_STL) $(EPHEMERAL_COMMAND_LINE_EXECUTABLES_EXECUTABLES
 
 $(EPHEMERAL_CASINGS)/%.stl: $(SOURCE_CASINGS)/%.scad $(SOURCE_CASINGS_COMMON_SCAD) makefile
 	mkdir -p $(dir $@)
-	openscad --hardwarnings --render --o $@ $<
+	$(OPENSCAD) --hardwarnings --render --o $@ $<
 
 $(EPHEMERAL_COMMAND_LINE_EXECUTABLES_EXECUTABLES)/%: $(SOURCE_COMMAND_LINE_EXECUTABLES_APPLICATIONS)/%.c $(EPHEMERAL_COMMAND_LINE_EXECUTABLES_LIBRARIES_O)
 	mkdir -p $(dir $@)
