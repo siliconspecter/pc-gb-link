@@ -18,4 +18,6 @@ jobs:
       if: ${{ matrix.os == 'windows-latest' }}
     - run: brew install --cask openscad
       if: ${{ matrix.os == 'macos-latest' }}
+    - run: brew install libftdi
+      if: ${{ matrix.os == 'macos-latest' }}
     - run: make
