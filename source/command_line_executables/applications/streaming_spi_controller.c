@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <libftdi1/ftdi.h>
 #include "../libraries/throw.h"
 #include "../libraries/reopen_as_read_only_binary_or_throw.h"
 #include "../libraries/reopen_as_write_only_binary_or_throw.h"
