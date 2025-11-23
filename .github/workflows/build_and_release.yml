@@ -14,7 +14,7 @@ jobs:
       if: ${{ matrix.os == 'ubuntu-latest' }}
     - run: winget install --accept-source-agreements --id=OpenSCAD.OpenSCAD -e
       if: ${{ matrix.os == 'windows-latest' }}
-    - run: vcpkg install libftdi1:x64-mingw-static
+    - run: vcpkg install libftdi1:x64-mingw-static libusb:x64-mingw-static
       if: ${{ matrix.os == 'windows-latest' }}
     - run: echo "$Env:ProgramFiles\OpenSCAD" >> $Env:GITHUB_PATH
       if: ${{ matrix.os == 'windows-latest' }}
@@ -26,8 +26,8 @@ jobs:
       if: ${{ matrix.os == 'ubuntu-latest' }}
     - run: make
       env:
-        C_INCLUDE_PATH: C:/vcpkg/packages/libftdi1_x64-mingw-static/include
-        LIBRARY_PATH: C:/vcpkg/packages/libftdi1_x64-mingw-static/lib
+        C_INCLUDE_PATH: C:/vcpkg/packages/libftdi1_x64-mingw-static/include C:/vcpkg/packages/libusb_x64-mingw-static/include
+        LIBRARY_PATH: C:/vcpkg/packages/libftdi1_x64-mingw-static/lib C:/vcpkg/packages/libusb_x64-mingw-static/lib
       if: ${{ matrix.os == 'windows-latest' }}
     - run: make
       env:
