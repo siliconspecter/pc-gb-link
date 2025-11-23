@@ -25,8 +25,8 @@ $(error Unknown architecture $(UNAME_P).)
 		ifeq ($(UNAME_P), x86_64)
 			COMMAND_LINE_EXECUTABLE_PREFIX=macos_x86_64_
 			COMMAND_LINE_EXECUTABLE_SUFFIX=
-		else ifeq ($(UNAME_P), aarch64)
-			COMMAND_LINE_EXECUTABLE_PREFIX=macos_aarch64_
+		else ifeq ($(UNAME_P), arm)
+			COMMAND_LINE_EXECUTABLE_PREFIX=macos_arm_
 			COMMAND_LINE_EXECUTABLE_SUFFIX=
 		else
 $(error Unknown architecture $(UNAME_P).)
