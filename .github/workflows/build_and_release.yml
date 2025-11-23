@@ -27,8 +27,10 @@ jobs:
     - run: make
       env:
         C_INCLUDE_PATH: C:/vcpkg/packages/libftdi_x64-mingw-static/include
+        LIBRARY_PATH: C:/vcpkg/packages/libftdi_x64-mingw-static/lib
       if: ${{ matrix.os == 'windows-latest' }}
     - run: make
       env:
         C_INCLUDE_PATH: /opt/homebrew/opt/libftdi/include
+        LIBRARY_PATH: /opt/homebrew/opt/libftdi/lib
       if: ${{ matrix.os == 'macos-latest' }}
