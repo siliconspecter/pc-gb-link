@@ -1,5 +1,7 @@
 name: build_and_release
 on: [push]
+permissions:
+  contents: write
 jobs:
   build_and_release:
     runs-on: ${{ matrix.os }}
