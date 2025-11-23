@@ -24,6 +24,8 @@ jobs:
       if: ${{ matrix.os == 'macos-latest' }}
     - run: make
       if: ${{ matrix.os == 'ubuntu-latest' }}
+    - run: dir c:/vcpkg/packages/libftdi_x64-mingw-static
+      if: ${{ matrix.os == 'windows-latest' }}
     - run: make
       env:
         C_INCLUDE_PATH: C:/vcpkg/packages/libftdi_x64-mingw-static/include
