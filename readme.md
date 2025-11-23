@@ -47,6 +47,10 @@ the conductors using electrical tape should suffice.
 These are currently built and tested for Windows and Linux.  Builds are available for macOS but have
 not been tested.
 
+You may need to use [Zadig](https://zadig.akeo.ie/) to install the correct driver on Windows; the
+driver installed by default will work as a COM port but might not expose the other functionality
+needed for these applications to work.
+
 ### streaming_cpi_controller
 
 Connects to the GB/GBP/GBC/GBA/GBA SP, forwarding binary data received on standard input and
