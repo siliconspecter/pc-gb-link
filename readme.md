@@ -44,6 +44,9 @@ the conductors using electrical tape should suffice.
 
 ## Command-line executables
 
+These are currently built and tested for Windows and Linux.  Builds are available for macOS but have
+not been tested.
+
 ### streaming_cpi_controller
 
 Connects to the GB/GBP/GBC/GBA/GBA SP, forwarding binary data received on standard input and
