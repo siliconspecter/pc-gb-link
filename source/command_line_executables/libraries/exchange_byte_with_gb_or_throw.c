@@ -12,8 +12,8 @@ static unsigned char mpsse_initialization_commands[] = {
     0x8d, /* Disable 3-phase data clocking. */
 
     0x86, /* Set clock divider. */
-    0x35, /* 60MHz / 3125 / 2 = 9600Hz. */
-    0x0c,
+    0xc0, /* 60MHz / 960 / 2 = 62.5KHz. */
+    0x03,
 
     0x85, /* Disconnects a loopback of some sort. */
 
