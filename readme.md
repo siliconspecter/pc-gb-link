@@ -14,8 +14,8 @@ To make an adapter, select one of the following:
 
 | Adapter    | IC      | Transfer method  | Pin 1 | Pin 2 | Pin 3 | Pin 4 | Pin 5 | Pin 6 |
 | ---------- | ------- | ---------------- | ----- | ----- | ----- | ----- | ----- | ----- |
-| CJMCU-200  | FT200XD | MPSSE (fast).    | GND   | SCL   | N/C   | SDA   | BCD   | N/C   |
-| CJMCU-232H | FT232H  | Bit bang (slow). | GND   | AD0   | N/C   | AD1   | AD2   | N/C   |
+| CJMCU-200  | FT200XD | Bit bang (slow). | GND   | SCL   | N/C   | SDA   | BCD   | N/C   |
+| CJMCU-232H | FT232H  | MPSSE (fast).    | GND   | AD0   | N/C   | AD1   | AD2   | N/C   |
 
 Confirm that the voltages on the above pads fall within the 0-3.3v range using a multimeter.  Do not
 use the adapter if any fall outside of this range as some adapters use counterfeit ICs which
