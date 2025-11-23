@@ -34,7 +34,7 @@ jobs:
         C_INCLUDE_PATH: /opt/homebrew/opt/libftdi/include
         LIBRARY_PATH: /opt/homebrew/opt/libftdi/lib
       if: ${{ matrix.os == 'macos-latest' }}
-    - run: gh release upload ${{ github.ref_name }} ephemeral/command_line_executables/*
+    - run: gh release upload ${{ github.ref_name }} ephemeral/command_line_executables/applications/*
       if: ${{ startsWith(github.ref, 'refs/tags/') }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
