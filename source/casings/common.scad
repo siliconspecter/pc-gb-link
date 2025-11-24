@@ -1,7 +1,7 @@
 pcb_thickness_mm = 1.8;
 shell_thickness_mm = 1.2;
 usb_width_mm = 12.5;
-usb_thickness_mm = 5.25;
+usb_thickness_mm = 4.625;
 screw_nut_sides = 6;
 screw_nut_diameter_mm = 5.1;
 screw_head_sides = 64;
